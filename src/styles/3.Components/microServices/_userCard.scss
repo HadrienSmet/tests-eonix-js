@@ -1,0 +1,43 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: calc(20% - 32px);
+    height: 168px;
+    background-color: $clr-2;
+    color: $clr-1;
+    padding: 16px 24px;
+    border-radius: 12px;
+    .card-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+        h3 {
+            font-size: 20px;
+        }
+        input {
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 32px;
+            outline: none;
+            border: none;
+        }
+        .error-message {
+            bottom: unset;
+            top: -10px;
+            transform: translateY(-100%);
+            color: $clr-2;
+        }
+    }
+    .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
