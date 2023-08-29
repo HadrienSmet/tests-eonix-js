@@ -7,6 +7,7 @@ import Header from "./components/common/Header";
 import "./styles/index.scss";
 import MonkeysPage from "./pages/MonkeysPage";
 import MicroServicesPage from "./pages/MicroServicesPage";
+import CounterPage from "./pages/CounterPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,6 +19,7 @@ root.render(
                 <Route path="/" element={<WelcomePage />} />
                 <Route path="/monkeys" element={<MonkeysPage />} />
                 <Route path="/micro-services" element={<MicroServicesPage />} />
+                <Route path="/counter" element={<CounterPage />} />
             </Routes>
         </Router>
     </React.StrictMode>

@@ -1,8 +1,28 @@
+@media screen and (min-width: 1025px) {
+    .welcome-content {
+        h1 {
+            font-size: 10vh;
+        }
+        h2 {
+            font-size: 7.5vh;
+        }
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .welcome-content {
+        h1 {
+            font-size: 7.5vh;
+        }
+        h2 {
+            font-size: 5vh;
+        }
+    }
+}
 .welcome-content {
     h1 {
-        font-size: 10vh;
+        font-size: 5vh;
     }
     h2 {
-        font-size: 7.5vh;
+        font-size: 4vh;
     }
 }

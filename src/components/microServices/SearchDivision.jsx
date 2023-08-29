@@ -3,6 +3,7 @@ import { axiosGetUsers } from "../../utils/axios/axiosGetUsers";
 import { useEffect } from "react";
 import { axiosSearchUser } from "../../utils/axios/axiosSearchUser";
 import { useRef } from "react";
+import { FaSearch } from "react-icons/fa";
 
 const useSearchDivision = (handleUsers) => {
     const [searchValue, setSearchValue] = useState("");
@@ -52,7 +53,7 @@ const SearchDivision = ({ handleUsers }) => {
     } = useSearchDivision(handleUsers);
     return (
         <div className="search-row">
-            <h2>Recherche un ou plusieurs utilisateurs!</h2>
+            <h2>Fais une recherche!</h2>
             <div className="search-user-div">
                 <div className="input-division">
                     <input
@@ -66,7 +67,9 @@ const SearchDivision = ({ handleUsers }) => {
                         Rechercher...
                     </label>
                 </div>
-                <button onClick={handleSearchUser}>Rechercher</button>
+                <button onClick={handleSearchUser}>
+                    <FaSearch />
+                </button>
             </div>
             <button onClick={handleSearchAll}>
                 Voir tous les utilisateurs

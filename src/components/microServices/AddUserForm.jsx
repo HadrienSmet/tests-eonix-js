@@ -87,7 +87,7 @@ const AddUserForm = ({ handleUsers }) => {
     return (
         <div className="add-user-row">
             <form action="">
-                <h2>Ajoute ton profil à notre base de données</h2>
+                <h2>Ajoute ton profil</h2>
                 <div className="input-division">
                     <input
                         type="text"

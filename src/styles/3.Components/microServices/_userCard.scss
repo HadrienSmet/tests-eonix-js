@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 12px;
     width: calc(20% - 32px);
+    min-width: 216px;
     height: 168px;
     background-color: $clr-2;
     color: $clr-1;
