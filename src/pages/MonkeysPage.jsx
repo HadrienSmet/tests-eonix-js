@@ -13,17 +13,21 @@ const firstOrdersList = [
     { order: "Marche sur les mains", type: "acrobatics" },
     { order: "Fais du monocycle", type: "acrobatics" },
     { order: "Fais un cumulet", type: "acrobatics" },
+    { order: "Fais un salto", type: "acrobatics" },
     { order: "Joue avec les cymbales", type: "music" },
     { order: "Joue aves les maracas", type: "music" },
     { order: "Joue du tambour", type: "music" },
+    { order: "Joue de la flûte", type: "music" },
 ];
 const scdOrdersList = [
     { order: "Fais le moonwalk", type: "acrobatics" },
     { order: "Jongle avec des balles", type: "acrobatics" },
     { order: "Tiens en équilibre sur une balle", type: "acrobatics" },
+    { order: "Fais une roue", type: "acrobatics" },
     { order: "Joue de la trompette", type: "music" },
     { order: "Joue du piano", type: "music" },
     { order: "Joue du tam-tam", type: "music" },
+    { order: "Fais du beat-box", type: "music" },
 ];
 
 const firstMonkey = new Monkey("Sasha", "Mojo Jojo", firstOrdersList);
@@ -52,6 +56,8 @@ const useMonkeysPage = () => {
         spectatorRef.current?.classList.remove("in-action");
     };
 
+    //@Params { type: Trainer(), type: Monkey(), type: number, type: number, type: Object[] }
+    //Handles the message displayed emitted from instances and the animation on the img tags
     const handleStep = (trainer, monkey, turn, randomIndex, list) => {
         removeAnimationClass();
         if (turn % 4 === 0) {
@@ -67,6 +73,7 @@ const useMonkeysPage = () => {
             setDetails(spectator.reacts(list[randomIndex].type, monkey.name));
         }
     };
+    //Called from the button it sets the index of the current steps and defines the behavior of the step by calling handleStep function
     const handleTurn = () => {
         setStepIndex((state) => state + 1);
         const rightList = turnIndex % 2 === 0 ? firstOrdersList : scdOrdersList;
@@ -84,8 +91,7 @@ const useMonkeysPage = () => {
 
     useEffect(() => {
         if (stepIndex % 4 === 0) {
-            setRandomIndex(Math.floor(Math.random() * 6));
-            specDivRef.current?.classList.add("center");
+            setRandomIndex(Math.floor(Math.random() * 8));
             if (stepIndex === 0) {
                 setDetails("Cliquez sur le boutton pour commencer");
             } else {
@@ -95,6 +101,7 @@ const useMonkeysPage = () => {
         }
     }, [stepIndex]);
 
+    //Handles where the spectator stays
     useEffect(() => {
         specDivRef.current?.classList.remove("center");
         specDivRef.current?.classList.remove("right");
