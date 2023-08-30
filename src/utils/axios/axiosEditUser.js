@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const axiosEditUser = async (userId, data) => {
     return await axios.patch(
-        `http://localhost:3000/api/auth/editUser/${userId}`,
+        `${import.meta.env.VITE_API_URL}api/auth/editUser/${userId}`,
         data,
         {
             headers: {
