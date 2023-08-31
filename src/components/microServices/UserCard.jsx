@@ -27,7 +27,6 @@ const useUserCard = (user, handleUsers) => {
             lastname === user.lastname
         ) {
             const updatedUser = { firstname, lastname };
-            console.log(updatedUser);
             axiosEditUser(user._id, updatedUser)
                 .then(() => {
                     setIsEditing(false);

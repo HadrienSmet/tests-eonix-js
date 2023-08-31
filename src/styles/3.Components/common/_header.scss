@@ -1,3 +1,28 @@
+@media screen and (min-width: 1025px) {
+    nav {
+        gap: 48px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    nav {
+        gap: 36px;
+    }
+}
+@media screen and (min-width: 768px) {
+    nav a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    header {
+        nav {
+            gap: 24px;
+        }
+        a {
+            font-size: 16px;
+        }
+    }
+}
 header {
     width: 100%;
     padding-top: 36px;
@@ -8,9 +33,8 @@ header {
     align-items: center;
     nav {
         display: flex;
-        gap: 48px;
+
         a {
-            font-size: 20px;
             position: relative;
             color: $clr-1;
             letter-spacing: 2px;

@@ -1,13 +1,37 @@
-.trainer-division {
-    display: flex;
-    align-items: flex-end;
-    img {
-        object-fit: cover;
+@media screen and (min-width: 1025px) {
+    .trainer-division img {
         &:first-of-type {
             height: 240px;
         }
         &:last-of-type {
             height: 120px;
         }
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .trainer-division img {
+        &:first-of-type {
+            height: 200px;
+        }
+        &:last-of-type {
+            height: 100px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .trainer-division img {
+        &:first-of-type {
+            height: 120px;
+        }
+        &:last-of-type {
+            height: 60px;
+        }
+    }
+}
+.trainer-division {
+    display: flex;
+    align-items: flex-end;
+    img {
+        object-fit: cover;
     }
 }

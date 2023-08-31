@@ -1,0 +1,28 @@
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .scene-displayer .spectator-div img {
+        height: 200px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .scene-displayer .spectator-div img {
+        height: 120px;
+    }
+}
+.action-displayer .scene-displayer {
+    height: 75%;
+    .trainers-div {
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .spectator-div {
+        padding: 0 100px;
+        display: flex;
+        &.right {
+            justify-content: flex-end;
+        }
+        &.center {
+            justify-content: center;
+        }
+    }
+}

@@ -1,9 +1,23 @@
+@media screen and (min-width: 1025px) {
+    .user-card {
+        width: calc(20% - 32px);
+        min-width: 216px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .user-card {
+        width: calc(33.33% - 22px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .user-card {
+        width: calc(50% - 12px);
+    }
+}
 .user-card {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: calc(20% - 32px);
-    min-width: 216px;
     height: 168px;
     background-color: $clr-2;
     color: $clr-1;

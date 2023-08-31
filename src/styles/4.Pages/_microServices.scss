@@ -1,11 +1,26 @@
+@media screen and (min-width: 1025px) {
+    .micro-services-page .users-displayer {
+        gap: 40px;
+    }
+}
 @media screen and (max-width: 1024px) {
-    .micro-services-page .buttons-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        > div {
-            width: 70% !important;
+    .micro-services-page {
+        .buttons-row {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            > div {
+                width: 70% !important;
+            }
         }
+        .users-displayer {
+            gap: 32px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .micro-services-page .users-displayer {
+        gap: 24px;
     }
 }
 .micro-services-page {
@@ -130,6 +145,5 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: start;
-        gap: 40px;
     }
 }

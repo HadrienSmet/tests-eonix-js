@@ -12,7 +12,7 @@ const useSearchDivision = (handleUsers) => {
     const handleSearchAll = () => {
         axiosGetUsers()
             .then((res) => handleUsers(res.data))
-            .catch((error) => console.log(error));
+            .catch((error) => alert(error));
     };
     const handleSearchUser = () => {
         if (searchValue.length > 1) {
@@ -25,7 +25,7 @@ const useSearchDivision = (handleUsers) => {
                         handleUsers([]);
                     }
                 })
-                .catch((err) => console.log(err));
+                .catch((err) => alert(err));
         }
     };
 
