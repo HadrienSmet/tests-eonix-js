@@ -36,8 +36,6 @@ const useDetailsDisplayer = (stepIndex) => {
         Math.floor(Math.random() * firstOrdersList.length)
     );
 
-    useEffect(() => {}, [stepIndex]);
-
     useEffect(() => {
         if (stepIndex % 8 === 0)
             setRandomIndex(Math.floor(Math.random() * firstOrdersList.length));
