@@ -37,9 +37,9 @@ const useDetailsDisplayer = (stepIndex) => {
     );
 
     useEffect(() => {
-        if (stepIndex % 8 === 0)
+        if (stepIndex % 8 === 1)
             setRandomIndex(Math.floor(Math.random() * firstOrdersList.length));
-        if (stepIndex % 8 === 3)
+        if (stepIndex % 8 === 4)
             setRandomIndex(Math.floor(Math.random() * scdOrdersList.length));
     }, [stepIndex]);
 
@@ -58,14 +58,18 @@ const useDetailsDisplayer = (stepIndex) => {
                     setDetails("Le dresseur suivant se prépare...");
                 }
             } else if (turn % 4 === 1) {
+                console.log(randomIndex);
                 setDetails(trainer.order(randomIndex));
             } else if (turn % 4 === 2) {
+                console.log(randomIndex);
                 setDetails(monkey.obey(randomIndex));
             } else if (turn % 4 === 3) {
+                console.log(randomIndex);
                 setDetails(
                     spectator.reacts(list[randomIndex].type, monkey.name)
                 );
             }
+            console.log(randomIndex);
         };
 
         handleDetails(

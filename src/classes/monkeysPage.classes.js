@@ -44,6 +44,7 @@ export class Spectator extends Human {
         super(name);
     }
     reacts(orderType, monkeyName) {
+        console.log(orderType);
         if (orderType === "music") {
             return `${this.name} siffle pour encourager ${monkeyName}`;
         } else {
